@@ -1,10 +1,15 @@
+import time
+from translator import trans
 
-import json
 def sort(need_to_sort):
     arr = []
     arr.extend(need_to_sort)
     if len(arr) == 1 or len(arr) == 0:
+        ts = time.time()
+        print("----------------------------------------------------------------------")
+        print("date: ",trans(ts))
         print("sorted: ",arr)
+        print("----------------------------------------------------------------------")
         return arr       
     
     else:
@@ -25,6 +30,11 @@ def sort(need_to_sort):
                 if current[0] < sorted_arr[sorted_i][0] and sorted_i == 0:
                     sorted_arr.insert(sorted_i,current)
 
-    
+
+        ts = time.time()
+        print("----------------------------------------------------------------------")
+        print("date: ",trans(ts))
         print("sorted: ",sorted_arr)
+        print("----------------------------------------------------------------------")
+        
         return sorted_arr

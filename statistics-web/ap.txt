@@ -1,16 +1,10 @@
-const { Spot } = require('@binance/connector')
+response of withdraw
+{ id: 'ccfca6350c26403abb3ae997ea70bb9a' }
 
-const apiKey = 'VdV0g4c1IaYSZwjVEjO2Tb7NdlhUtsJ6GbP6JJ7Zz6HYYo2APxSVshzNToS2F9B8'
-const apiSecret = 'LPAgZk9xWT5YaaZFeyj2YNU6xcZUebSZtPtr5G3y7LbYUw4Y3dMzBT5d0PDwON16'
-const client = new Spot(apiKey, apiSecret, {timeout: 5000})
+bybit:
+key: Ljt3FiiQxrHcoLUqIZ
+secret:cgzuin38lwY5gMe0v8vektiVpCWNQUDCQMa1
 
-
-
-client.account().then(response => client.logger.log(response.data)).catch(error => client.logger.error(error))
-
-client.newOrder('EOSBUSD', 'BUY', 'LIMIT', {
-  price: '1',
-  quantity: 11,
-  timeInForce: 'GTC'
-}).then(response => client.logger.log(response.data))
-  .catch(error => client.logger.error(error))
+testnet:
+var apiKey = "Us48E2QU4fTs1HpHgF";
+var secret = "JkB4bGR9ik317VTR8qGxLHP3uARgTZes1njH";

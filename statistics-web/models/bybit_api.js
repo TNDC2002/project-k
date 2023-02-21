@@ -1,10 +1,10 @@
 const crypto = require('crypto');
 const axios = require('axios');
 
-url = 'https://api-testnet.bybit.com';
+url = 'https://api.bybit.com';
 
-var apiKey = "Us48E2QU4fTs1HpHgF";
-var secret = "JkB4bGR9ik317VTR8qGxLHP3uARgTZes1njH";
+var apiKey = "Ljt3FiiQxrHcoLUqIZ";
+var secret = "cgzuin38lwY5gMe0v8vektiVpCWNQUDCQMa1";
 var recvWindow = 5000;
 var timestamp = Date.now().toString();
 
@@ -46,20 +46,18 @@ async function http_request(endpoint, method, data, Info) {
 }
 
 //Create Order
-async function sell(sprice, squantity, symbol) {
+async function sell(squantity) {
   // symbol = "ADAUSDC"
   endpoint = "/spot/v3/private/order"
   const orderLinkId = crypto.randomBytes(16).toString("hex");
-  var data = '{"symbol":"' + symbol + '","orderType":"Limit","side":"Sell","orderLinkId":"' + orderLinkId + '","orderQty":"' + squantity + '","orderPrice":"' + sprice + '","timeInForce":"GTC"}';
+  var data = '{"symbol":"' + "EOSUSDC" + '","orderType":"MARKET","side":"Sell","orderLinkId":"' + orderLinkId + '","orderQty":"' + squantity + '","timeInForce":"GTC"}';
   await http_request(endpoint, "POST", data, "Create");
-
-
   //Cancel order
   // endpoint="/spot/v3/private/cancel-order"
   // var data = '{"orderLinkId":"' +  orderLinkId +'"}';
   // await http_request(endpoint,"POST",data,"Cancel");
 }
+// sell(0.1)
 
-//Create, List and Cancel Orders
-// sell(820, 0.00001, "ADAUSDC")
+// sell(1, 0.00001, "EOSUSDC")
 module.exports = sell
