@@ -1,7 +1,7 @@
 # project-k
 Introduction:
  - project-k was the arbitage trading  bot, it was developed in secret to protect the source code in case it success. Afterall the great test was fail so it will be publish from now on
- - this project also droped for couble months so its dependence resouce might outdated right at the moment it pushed to github! Careful if you plan to reuse it!
+ - this project also droped for couble months so its dependence resource might outdated right at the moment it pushed to github! Careful if you plan to reuse it!
  
  Tutorial:
   - create your binance api-key on https://www.binance.com/en/my/settings/api-management , edit API restriction, enable Spot&Margin Trading, enable withdrawals, enable Permit Universal Transfer.
