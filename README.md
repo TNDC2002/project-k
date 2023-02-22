@@ -12,5 +12,5 @@ Introduction:
   - run below files sequencely: /socket-io/binance-wallet-socket.py, /socket-io/bybit-wallet-socket.py, /socket-io/binance-socket.py, /socket-io/bybit-socket.py, /statistics-web/index.js
   
  Note:
-  - all my API in the source was disabled, dont waste your time!
+  - all my API key in the source was disabled, dont waste your time!
   - recomend using https://pm2.keymetrics.io/ console to run the source for perfomance and stablity
